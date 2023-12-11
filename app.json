@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/post/post",
+    "pages/index/index",
+    "pages/post-detail/post-detail",
+    "pages/movie/movie"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "selectedColor": "#333333",
+    "color": "#999999", 
+    "list": [
+      {
+        "pagePath": "pages/post/post",
+        "text": "首页",
+        "iconPath": "/images/tab/post.png",
+        "selectedIconPath": "/images/tab/post@highlight.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "日志",
+        "iconPath": "/images/tab/movie.png",
+        "selectedIconPath": "/images/tab/movie@highlight.png"
+      }
+    ]
+  },
+ 
+"requiredBackgroundModes": ["audio","location"],
+"sitemapLocation": "sitemap.json"
+}

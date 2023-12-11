@@ -1,0 +1,21 @@
+<view class="container">
+  <image  class="post-detail-topImage" src="{{postData.imgSrc}}"></image>
+  <image wx:if="{{!isPlaying}}" bind:tap="onMusicStart" class="audio" preload="none" src="../../images/music/music-start.png"></image>
+  <image wx:else bind:tap="onMusicStop" class="audio" preload="none" src="../../images/music/music-stop.png"></image>
+  <view class="auth-date">
+    <image class="auth-avatar" src="{{postData.avatar}}"></image>
+    <text class="post-detail-author">{{postData.date}}</text>
+    <text class="post-detail-text">发表于</text>
+    <text class="post-detail-date">1分钟前</text>
+  </view>
+  <text class="post-detail-title">{{postData.title}}</text>
+  <view class="tool">
+  <view class="circle">
+    <image wx:if="{{collected}}" bind:tap="onCollect" src="/images/icon/collection.png"></image>
+    <image wx:else bind:tap="onCollect" src="/images/icon/collection-anti.png"></image>
+    <image bind:tap="onShare" class="share-img" src="/images/icon/share.png"></image>
+  </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="post-detail-text-end">{{postData.detail}}</text>
+</view> 

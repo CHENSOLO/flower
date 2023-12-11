@@ -1,0 +1,17 @@
+/* components/movie/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 200rpx;
+}
+.poster{
+  width: 200rpx;
+  height: 270rpx;
+  margin-bottom: 22rpx;
+}
+.title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

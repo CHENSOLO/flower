@@ -1,0 +1,90 @@
+/* pages/post-detail/post-detail.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.post-detail-topImage{
+  width: 100%;
+  height: 460rpx;
+}
+.auth-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rpx 0 20rpx 20rpx;
+}
+.auth-avatar {
+  width: 60rpx;
+  height: 60rpx;
+}
+.post-detail-author {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.post-detail-text {
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+.post-detail-date {
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+
+}
+.post-detail-title{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  color: #333;
+  letter-spacing: 2rpx;
+}
+.horizon{
+  width: 660rpx;
+  height: 1rpx;
+  background-color: #e5e5e5;
+  position: absolute;
+  z-index: -99;
+}
+.circle{
+  width: 660rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.circle image {
+  height: 90rpx;
+  width: 90rpx;
+}
+.share-img{
+  margin-left: 30rpx;
+}
+.tool{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.post-detail-text-end{
+  color: #666;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+  line-height: 50rpx;
+  letter-spacing: 2px;
+}
+/*
+ 该容器宽度100% 高度460/2 因为图标51*55 
+ 所以top 185 left 50%
+ 图标width为102rpx 则margin left 为51rpx,相反反向
+*/
+.audio{
+  width: 102rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  top: 185rpx;
+}

@@ -1,0 +1,23 @@
+<view>
+  <!-- 第一部分 -->
+  <swiper circular indicator-dots="{{true}}" autoplay="{{true}}">
+    <swiper-item>
+      <image bind:tap="onGoToDetail" data-postid="0" src="/images/bestplayers.png"></image>
+    </swiper-item>
+    <!-- 插槽 -->
+    <swiper-item>
+      <image bind:tap="onGoToDetail" data-postid="1" src="/images/lpl.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image bind:tap="onGoToDetail" data-postid="2" src="/images/jumpfly.png"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 第二部分 -->
+  <!-- 序号 -->
+  <!-- 括号 -->
+  <!-- 服务端数据库里 id -->
+  <!-- 第一个 -->
+  <block  wx:for="{{PostList}}" wx:key="index">
+    <post res="{{item}}"/>
+</block>
+</view>
