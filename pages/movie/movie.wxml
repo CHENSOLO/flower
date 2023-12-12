@@ -1,1 +1,4 @@
-<movie-list></movie-list>
+<movie-list title="正在热映" my-class="movie-list"></movie-list>
+<movie-list title="即将热映" my-class="movie-list"></movie-list>
+<movie-list title="正在热映" my-class="movie-list"></movie-list>
+<movie-list title="正在热映" my-class="movie-list"></movie-list>

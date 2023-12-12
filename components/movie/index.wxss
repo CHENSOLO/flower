@@ -15,3 +15,13 @@
   text-overflow: ellipsis;
   word-break: break-all;
 }
+.raw-container{
+  margin-top: 6rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.score{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}

@@ -1,7 +1,11 @@
-<view class="container">
-  <view>
-    <text>正在热映</text>
-    <text>更多></text>
+<view class="container my-class">
+  <view class="title-container">
+    <text>{{title}}</text>
+    <text class="more-text">更多></text>
   </view>
+<view  class="movie-container">
+  <movie ></movie>
   <movie></movie>
+  <movie></movie>
+</view>
 </view>

@@ -12,7 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    wx.request({
+      url: 'http://t.talelin.com/v2/movie/in_theaters',
+      success(res){
+        console.log(res)
+      }
+    })
+    //API接口地址
   },
 
   /**
