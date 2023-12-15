@@ -4,8 +4,13 @@
     <text class="more-text">更多></text>
   </view>
 <view  class="movie-container">
-  <movie ></movie>
-  <movie></movie>
-  <movie></movie>
+<block wx:for="{{movies}}" wx:key="index">
+  <movie movie="{{item}}"/>
+</block>
+<!-- <movie></movie>
+<movie></movie>
+<movie></movie> -->
+
+
 </view>
 </view>

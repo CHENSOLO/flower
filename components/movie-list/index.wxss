@@ -1,9 +1,8 @@
 /* components/movie-list/index.wxss */
-.container{
-  padding: 36rpx 28rpx;
-  background-color: #ffffff;
-  /* margin-bottom: 20rpx; */
 
+.container{
+  padding: 36rpx 36rpx;
+  background-color: #ffffff;
 }
 
 .title-container{
@@ -20,6 +19,5 @@
 }
 
 .more-text{
- color: blue;
+  color: #1f4ba5;
 }
-

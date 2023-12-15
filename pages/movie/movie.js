@@ -1,10 +1,13 @@
 // pages/movie/movie.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    inTheaters:[],
 
   },
 
@@ -13,11 +16,21 @@ Page({
    */
   onLoad(options) {
     wx.request({
-      url: 'http://t.talelin.com/v2/movie/in_theaters',
-      success(res){
-        console.log(res)
-      }
+      url: app.gBaseUrl + 'in_theaters',
+      data:{
+        start:0,
+        count:3
+      },
+      success:(res)=>{
+        console.log(res.data)
+        // console.log(this)
+        this.setData({
+          inTheaters:res.data.subjects
+        })
+      }     
     })
+    // console.log(this)
+
     //API接口地址
   },
 

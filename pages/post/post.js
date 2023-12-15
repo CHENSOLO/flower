@@ -36,7 +36,7 @@ async onLoad(options) {
         key: 'flag',
       }
     )
-    console.log(flag)
+    // console.log(flag)
 
     this.setData({
       PostList

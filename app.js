@@ -30,4 +30,5 @@ App({
   //定义全局变量
   gIsPlayingMusic: false,  //音乐默认是暂停播放
   gIscurrentMusicPostId: -1,   // 默认播放id为0
+  gBaseUrl:"http://t.talelin.com/v2/movie/",
 })
