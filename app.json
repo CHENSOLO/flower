@@ -4,7 +4,8 @@
     "pages/post/post",
     "pages/index/index",
     "pages/post-detail/post-detail",
-    "pages/movie/movie"
+    "pages/movie/movie",
+    "pages/more-movie/more-movie"
   ],
   "window": {
     "navigationBarBackgroundColor": "#b3d4db",
@@ -15,7 +16,7 @@
   },
   "tabBar": {
     "selectedColor": "#333333",
-    "color": "#999999", 
+    "color": "#999999",
     "list": [
       {
         "pagePath": "pages/post/post",
@@ -31,7 +32,9 @@
       }
     ]
   },
- 
-"requiredBackgroundModes": ["audio","location"],
-"sitemapLocation": "sitemap.json"
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "sitemapLocation": "sitemap.json"
 }

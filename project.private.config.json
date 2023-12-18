@@ -5,6 +5,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/more-movie/more-movie",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/movie/movie",
           "query": "",
           "launchMode": "default",

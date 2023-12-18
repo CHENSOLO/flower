@@ -8,13 +8,15 @@ Page({
    */
   data: {
     inTheaters:[],
-
+    coming_soon:[],
+    top250:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+  //正在热映
     wx.request({
       url: app.gBaseUrl + 'in_theaters',
       data:{
@@ -22,15 +24,45 @@ Page({
         count:3
       },
       success:(res)=>{
-        console.log(res.data)
+        // console.log(res.data)
         // console.log(this)
         this.setData({
           inTheaters:res.data.subjects
         })
       }     
+    }) 
+    //即将热映
+    wx.request({
+      url: app.gBaseUrl + 'coming_soon',
+      data:{
+        start:0,
+        count:3
+      },
+      success:(res)=>{
+        console.log(res.data)
+        this.setData({
+          coming_soon:res.data.subjects
+        })
+      }
     })
-    // console.log(this)
+  //即将上映
+  wx.request({
+    url: app.gBaseUrl + 'top250',
+    data:{
+      start:0,
+      count:3
+    },
+    success:(res)=>{
+      console.log(res.data)
+      this.setData({
+        top250:res.data.subjects
+      })
+    }
+  })
 
+    
+    // console.log(this)
+ 
     //API接口地址
   },
 
