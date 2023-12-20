@@ -1,7 +1,9 @@
 /* pages/movie/movie.wxss */
 .movie-list{
-  margin-bottom: 22rpx;
-  
+  margin-bottom: 22rpx; 
+}
+.ex-search-bar{
+  height: 60rpx !important;
 }
 page{
   background-color:#f2f2f2;

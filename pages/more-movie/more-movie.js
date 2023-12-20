@@ -13,16 +13,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    //type属于固定写法
+    // console.log(options.type)
+    const type = options.type
 //数据加载
     wx.request({
-      url: app.gBaseUrl + 'in_theaters',
+      url: app.gBaseUrl + type,
       data:{
         start:0,
         count:12
       },
       success:(res)=>{
-        // console.log(res.data)
-        // console.log(this)
         this.setData({
           movies:res.data.subjects
         })

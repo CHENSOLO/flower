@@ -1,3 +1,9 @@
-<movie-list title="正在热映" movies="{{inTheaters}}" my-class="movie-list"/>
-<movie-list title="即将热映" movies="{{coming_soon}}" my-class="movie-list"/>
-<movie-list title="即将上映" movies="{{top250}}" my-class="movie-list"/>
+<l-search-bar l-class="ex-search-bar" bind:linconfirm="onConfirm" bg-color="#f6f6f6" placeholder="搜索" show-cancel="{{false}}" />
+<view wx:if="{{!searchResult}}">
+  <movie-list data-type="in_theaters" bind:tap="onGotoMore" title="正在热映" movies="{{inTheaters}}" my-class="movie-list" />
+  <movie-list data-type="coming_soon" bind:tap="onGotoMore" title="即将热映" movies="{{coming_soon}}" my-class="movie-list" />
+  <movie-list data-type="top250" bind:tap="onGotoMore" title="即将上映" movies="{{top250}}" my-class="movie-list" />
+</view>
+<view wx:else="">
+<text>搜索结果</text>
+</view>

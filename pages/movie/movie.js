@@ -9,12 +9,16 @@ Page({
   data: {
     inTheaters:[],
     coming_soon:[],
-    top250:[]
+    top250:[],
+    //默认搜索结果是无
+    searchResult: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+
+   
   onLoad(options) {
   //正在热映
     wx.request({
@@ -39,7 +43,7 @@ Page({
         count:3
       },
       success:(res)=>{
-        console.log(res.data)
+        // console.log(res.data)
         this.setData({
           coming_soon:res.data.subjects
         })
@@ -53,7 +57,7 @@ Page({
       count:3
     },
     success:(res)=>{
-      console.log(res.data)
+      // console.log(res.data)
       this.setData({
         top250:res.data.subjects
       })
@@ -65,6 +69,30 @@ Page({
  
     //API接口地址
   },
+  //点击更多跳转
+  onGotoMore(event){
+    // console.log(event)获取对应的数据
+    const type = event.currentTarget.dataset.type
+    // console.log(type)
+    wx.navigateTo({
+      url: '../more-movie/more-movie?type=' + type,
+    })
+  },
+  //搜索查询
+  onConfirm(event){
+    // console.log(event)
+    this.setData({
+      searchResult:true
+    })
+    wx.request({
+      url: app.gBaseUrl + 'search',
+      data:{
+        q:event.detail.value
+      }
+    })
+  
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
