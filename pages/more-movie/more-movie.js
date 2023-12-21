@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movies:[]
+    movies:[],
+    _type:null
   },
 
   /**
@@ -16,6 +17,7 @@ Page({
     //type属于固定写法
     // console.log(options.type)
     const type = options.type
+    this.data._type = type
 //数据加载
     wx.request({
       url: app.gBaseUrl + type,
@@ -70,7 +72,21 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-
+    const type =  this.data._type
+    // console.log(type)
+    //数据加载
+    wx.request({
+      url: app.gBaseUrl + type,
+      data:{
+        start:12,
+        count:12
+      },
+      success:(res)=>{
+        this.setData({
+          movies:this.data.movies.concat(res.data.subjects)
+        })
+      }     
+    }) 
   },
 
   /**

@@ -10,6 +10,7 @@ Page({
     inTheaters:[],
     coming_soon:[],
     top250:[],
+    searchData:[],
     //默认搜索结果是无
     searchResult: false
   },
@@ -78,7 +79,7 @@ Page({
       url: '../more-movie/more-movie?type=' + type,
     })
   },
-  //搜索查询
+  //搜索确认查询
   onConfirm(event){
     // console.log(event)
     this.setData({
@@ -88,12 +89,22 @@ Page({
       url: app.gBaseUrl + 'search',
       data:{
         q:event.detail.value
+      },
+      success:(res)=>{
+        // console.log(res.data)
+        this.setData({
+          searchData: res.data.subjects
+        })
       }
     })
-  
   },
-
-
+//搜索取消查询
+  onCancel(event){
+    console.log(event)
+    this.setData({
+      searchResult:false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
