@@ -45,18 +45,20 @@ async onLoad(options) {
 
   onGoToDetail(event){
     //事件的对象
-    // console.log(event)
-    // console.log(event.currentTarget.dataset.postid)
+    // console.log(event) 
+    // console.log(event.currentTarget.dataset.postId)
+    //获取自定义事件的pid
+    // console.log(event.detail.pid)
     // 页面数据传递通常使用url传递
-    const pid = event.currentTarget.dataset.postid
+    const pid = event.detail.pid | event.currentTarget.dataset.postId
     wx.navigateTo({
-      url: '../post-detail/post-detail?pid='+pid,
+      url: '../post-det ail/post-detail?pid='+pid,
     })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
-   */
+   */   
   onReady() {
     // console.log("onready")
   },

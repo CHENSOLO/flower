@@ -19,6 +19,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onGotomoviedetail(event){
+        // console.log(event)
+        // console.log(this.properties.movie.id)
+        const id = this.properties.movie.id
+        wx.navigateTo({
+          url: '../../pages/movie-detail/movie-detail?mid='+id,
+        })
+    }
   }
 })

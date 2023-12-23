@@ -1,4 +1,4 @@
-<view class="container">
+<view bind:tap="onGotomoviedetail" class="container">
   <image class="poster" src="{{movie.images.large}}"></image>
   <text class="title">{{movie.title}}</text>
   <view class="raw-container">

@@ -17,18 +17,24 @@ Component({
 
   /**
    * 组件的方法列表
+   * 组件的使用者
+   * 定义事件
    */
   methods: {
-    onGoToDetail(event){
+    onTap(event){
       // console.log(event.currentTarget.dataset.postId)
       //事件的对象
       // console.log(event)
       // console.log(event.currentTarget.dataset.postid)
       // 页面数据传递通常使用url传递
-      const pid = event.currentTarget.dataset.postId
-      wx.navigateTo({
-        url: '../post-detail/post-detail?pid='+pid,
-      })
+      const pid = this.properties.res.postId
+    //   wx.navigateTo({
+    //     url: '../post-detail/post-detail?pid='+pid,
+    //   })
+        this.triggerEvent('posttap',{
+            pid,
+            test:1
+        })
     },
   }
 })
