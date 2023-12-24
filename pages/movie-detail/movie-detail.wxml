@@ -1,2 +1,13 @@
-<!--pages/movie-detail/movie-detail.wxml-->
-<text>pages/movie-detail/movie-detail.wxml</text>
+<view class="container">
+  <image src="{{movie.images.large}}"></image>
+  <view>
+    <text class="main-title">{{movie.title}}</text>
+    <text class="sub-title">{{movie.countries}}*{{movie.year}}</text>
+  </view>
+  <view>
+    <text class="highligh-font">{{movie.wish_count}}</text>
+    <text class="plain-font">人喜欢</text>
+    <text class="font">{{movie.comments_count}}</text>
+    <text class="plain-font">条评论</text>
+  </view>
+</view>
