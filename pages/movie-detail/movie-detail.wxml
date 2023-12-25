@@ -1,13 +1,23 @@
 <view class="container">
-  <image src="{{movie.images.large}}"></image>
-  <view>
+  <image mode="aspectFill" class="head-image" src="{{movie.images.large}}"></image>
+  <view class="head-img-hover">
     <text class="main-title">{{movie.title}}</text>
-    <text class="sub-title">{{movie.countries}}*{{movie.year}}</text>
-  </view>
-  <view>
+    <text class="sub-title">{{movie.countries[0] + '·'+ movie.year}}</text>
+  <view class="like-title">
     <text class="highligh-font">{{movie.wish_count}}</text>
     <text class="plain-font">人喜欢</text>
-    <text class="font">{{movie.comments_count}}</text>
+    <text class="highligh-font">{{movie.comments_count}}</text>
     <text class="plain-font">条评论</text>
   </view>
+</view>
+  <view>
+  <image class="movie-img" bind:tap="onViewPost" src="{{movie.images.large}}"></image>
+  </view>
+<!-- 第二部分 -->
+<view>
+<text>{{movie.original_title}}</text>
+<text>评分</text>
+<l-rate disabled="{{true}}" size="25" score="{{movie.rating.stars/10}}" />
+<text>{{movie.rating.average}}</text>
+</view>
 </view>
