@@ -3,21 +3,46 @@
   <view class="head-img-hover">
     <text class="main-title">{{movie.title}}</text>
     <text class="sub-title">{{movie.countries[0] + '·'+ movie.year}}</text>
-  <view class="like-title">
-    <text class="highligh-font">{{movie.wish_count}}</text>
-    <text class="plain-font">人喜欢</text>
-    <text class="highligh-font">{{movie.comments_count}}</text>
-    <text class="plain-font">条评论</text>
+    <view class="like-title">
+      <text class="highligh-font">{{movie.wish_count}}</text>
+      <text class="plain-font">人喜欢</text>
+      <text class="highligh-font">{{movie.comments_count}}</text>
+      <text class="plain-font">条评论</text>
+    </view>
   </view>
-</view>
   <view>
-  <image class="movie-img" bind:tap="onViewPost" src="{{movie.images.large}}"></image>
+    <image class="movie-img" bind:tap="onViewPost" src="{{movie.images.large}}"></image>
   </view>
-<!-- 第二部分 -->
-<view>
-<text>{{movie.original_title}}</text>
-<text>评分</text>
-<l-rate disabled="{{true}}" size="25" score="{{movie.rating.stars/10}}" />
-<text>{{movie.rating.average}}</text>
+  <!-- 第二部分 -->
+  <view class="container-movieinfo">
+    <text class="origin-title">{{movie.original_title}}</text>
+    <view class="info-text">
+      <text class="mark" >评分</text>
+      <l-rate disabled="{{true}}" size="25" score="{{movie.rating.stars/10}}" />
+      <text>{{movie.rating.average}}</text>
+    </view>
+    <view class="info-text">
+      <text class="mark">导演</text>
+      <text>{{movie.casts[0].name}}</text>
+    </view>
+    <view class="info-text">
+      <text class="mark">影人</text>
+      <text>{{movie.casts[0].name}}/</text>
+      <text>{{movie.casts[1].name}}/</text>
+      <text>{{movie.casts[2].name}}</text>
+    </view>
+    <view class="info-text">
+      <text class="mark">类型</text>
+      <text>{{movie.genres}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+<!-- 第三部分 -->
+<view class="container-detailinfo">
+  <text class="container-detailinfo-font">剧情简介</text>
+  <text class="container-detailinfo-content">{{movie.summary}}</text>
 </view>
+<view class="hr"></view>
+<!-- 第四部分 -->
+<image src="{{handle_movie.images.large}}"></image>
 </view>
