@@ -17,7 +17,7 @@
   <view class="container-movieinfo">
     <text class="origin-title">{{movie.original_title}}</text>
     <view class="info-text">
-      <text class="mark" >评分</text>
+      <text class="mark">评分</text>
       <l-rate disabled="{{true}}" size="25" score="{{movie.rating.stars/10}}" />
       <text>{{movie.rating.average}}</text>
     </view>
@@ -37,12 +37,26 @@
     </view>
   </view>
   <view class="hr"></view>
-<!-- 第三部分 -->
-<view class="container-detailinfo">
-  <text class="container-detailinfo-font">剧情简介</text>
-  <text class="container-detailinfo-content">{{movie.summary}}</text>
-</view>
-<view class="hr"></view>
-<!-- 第四部分 -->
-<image src="{{handle_movie.images.large}}"></image>
+  <!-- 第三部分 -->
+  <view class="container-detailinfo">
+    <text class="container-detailinfo-font">剧情简介</text>
+    <text class="container-detailinfo-content">{{movie.summary}}</text>
+  </view>
+  <view class="hr"></view>
+  <!-- 第四部分 -->
+  <view class="container-personinfo">
+    <text class="person-font">影人</text>
+    <scroll-view enable-flex="{{true}}" scroll-x="{{true}}" class="person-container">
+      <block wx:for="{{movie.casts}}" wx:key="index">
+        <view class="person-container-box">
+          <image class="cast-img" src="{{item.avatars.large}}"></image>
+          <text class="cast-name">{{item.name}}</text>
+        </view>
+        <view class="person-container-box">
+          <image class="cast-img" src="{{item.avatars.large}}"></image>
+          <text  class="cast-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
 </view>

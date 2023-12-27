@@ -1,5 +1,5 @@
 // pages/movie-detail/movie-detail.js
-// import{convertToCastInfos} from '../../utils/utils.js'
+import{convertToCastInfos} from '../../utils/utils.js'
 const app = getApp()
 
 Page({
@@ -9,7 +9,7 @@ Page({
    */
   data: {
     movie: {},
-    handle_movie:{}
+    // handle_movie:{}
   },
 
   /**
@@ -30,15 +30,14 @@ Page({
   },
 
   //处理数据
-  processMovieData(movie){
-    const data = {}
-    // data.castsInfo = convertToCastInfos(movie.casts)
-    console.log(movie.casts)
-    data.castsInfo = movie.casts
-    this.setData({
-      handle_movie:data
-    })
-  },
+  // processMovieData(movie){
+  //   // console.log(111+movie)
+  //   const data = {'123':213}
+  //   // data.castsInfo = convertToCastInfos(movie.casts)
+  //   this.setData({
+  //     handle_movie:data
+  //   })
+  // },
 
   //图片放大
   onViewPost(event){

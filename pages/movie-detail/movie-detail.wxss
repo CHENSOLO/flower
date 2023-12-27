@@ -97,3 +97,31 @@
   line-height: 45rpx;
   letter-spacing: 2rpx;
 }
+.container-personinfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+}
+.person-container{
+  display: flex;
+  flex-direction: row;
+  height: 300rpx;
+}
+.cast-img{
+  width: 170rpx;
+  height: 210rpx;
+  margin-right: 28rpx;
+}
+.person-container-box{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  /* height: 100rpx; */
+}
+.cast-name{
+  width: 170rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
